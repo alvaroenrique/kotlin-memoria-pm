@@ -1,5 +1,6 @@
 package pe.edu.ulima.pm.memoria
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -36,25 +37,44 @@ class MainActivity : AppCompatActivity() {
             "\uD83C\uDFD8"
         ).shuffled().take(6)
 
-        val emejisToAsign = (emojis + emojis).shuffled()
+        val colors: List<String> = listOf("#EBF5DF", "#EDB458", "#80CED7", "#CCDBDC", "#C5D1EB", "#FEFCAD", "#A7BED3", "#9F86C0")
+
+        val randomEmojis: List<String> = (emojis + emojis).shuffled()
+
+        val randomColor: String = colors.shuffled().take(1)[0]
 
         val buttons: Array<Button> = arrayOf(
-            findViewById<Button>(R.id.but1),
-            findViewById<Button>(R.id.but2),
-            findViewById<Button>(R.id.but3),
-            findViewById<Button>(R.id.but4),
-            findViewById<Button>(R.id.but5),
-            findViewById<Button>(R.id.but6),
-            findViewById<Button>(R.id.but7),
-            findViewById<Button>(R.id.but8),
-            findViewById<Button>(R.id.but9),
-            findViewById<Button>(R.id.but10),
-            findViewById<Button>(R.id.but11),
-            findViewById<Button>(R.id.but12)
+            findViewById(R.id.but1),
+            findViewById(R.id.but2),
+            findViewById(R.id.but3),
+            findViewById(R.id.but4),
+            findViewById(R.id.but5),
+            findViewById(R.id.but6),
+            findViewById(R.id.but7),
+            findViewById(R.id.but8),
+            findViewById(R.id.but9),
+            findViewById(R.id.but10),
+            findViewById(R.id.but11),
+            findViewById(R.id.but12)
         )
 
-        buttons.forEachIndexed { index, element ->
-            element.text = emejisToAsign[index]
+        buttons.forEachIndexed { index, but ->
+            but.text = randomEmojis[index]
+            but.setBackgroundColor(Color.parseColor(randomColor))
         }
     }
+
+
+    fun BotonClick(view: View) {
+        val but: Button = view as Button
+        if (but.textSize == 0F){
+            but.setTextSize(40F)
+        }
+        else{
+            but.setTextSize(0F)
+        }
+
+    }
+
+
 }
