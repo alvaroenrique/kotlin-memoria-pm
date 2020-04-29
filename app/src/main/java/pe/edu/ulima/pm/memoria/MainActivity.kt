@@ -16,16 +16,27 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun initGame() {
-        val emojis: Array<String> = arrayOf(
+        val emojis: List<String> = listOf(
             "\uD83D\uDE00",
             "\uD83D\uDE03",
             "\uD83D\uDE04",
             "\uD83D\uDE01",
             "\uD83D\uDE06",
-            "\uD83D\uDE05"
-        )
+            "\uD83D\uDE05",
+            "\uD83D\uDC7D",
+            "\uD83D\uDC7E",
+            "\uD83D\uDC7B",
+            "\uD83D\uDCA9",
+            "\uD83D\uDC4D",
+            "\uD83D\uDE4D",
+            "\uD83C\uDF66",
+            "\uD83C\uDF70",
+            "\uD83C\uDF7A",
+            "\uD83C\uDF0D",
+            "\uD83C\uDFD8"
+        ).shuffled().take(6)
 
-        val emejisToAsign = emojis + emojis
+        val emejisToAsign = (emojis + emojis).shuffled()
 
         val buttons: Array<Button> = arrayOf(
             findViewById<Button>(R.id.but1),
