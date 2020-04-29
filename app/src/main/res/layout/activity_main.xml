@@ -13,16 +13,29 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <Button
+            android:id="@+id/but1"
             android:layout_weight="1"
-            android:layout_width="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="40sp"
+            android:onClick="butOnClick"/>
+        <Button
+            android:id="@+id/but2"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
             android:layout_height="match_parent"/>
         <Button
+            android:id="@+id/but3"
             android:layout_weight="1"
-            android:layout_width="80dp"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
             android:layout_height="match_parent"/>
         <Button
+            android:id="@+id/but4"
             android:layout_weight="1"
-            android:layout_width="80dp"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
             android:layout_height="match_parent"/>
     </LinearLayout>
 
@@ -31,16 +44,28 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <Button
+            android:id="@+id/but5"
             android:layout_weight="1"
-            android:layout_width="80dp"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
             android:layout_height="match_parent"/>
         <Button
+            android:id="@+id/but6"
             android:layout_weight="1"
-            android:layout_width="80dp"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
             android:layout_height="match_parent"/>
         <Button
+            android:id="@+id/but7"
             android:layout_weight="1"
-            android:layout_width="80dp"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/but8"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
             android:layout_height="match_parent"/>
 
 
@@ -51,16 +76,28 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <Button
+            android:id="@+id/but9"
             android:layout_weight="1"
-            android:layout_width="80dp"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
             android:layout_height="match_parent"/>
         <Button
+            android:id="@+id/but10"
             android:layout_weight="1"
-            android:layout_width="80dp"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
             android:layout_height="match_parent"/>
         <Button
+            android:id="@+id/but11"
             android:layout_weight="1"
-            android:layout_width="80dp"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/but12"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
             android:layout_height="match_parent"/>
 
     </LinearLayout>
