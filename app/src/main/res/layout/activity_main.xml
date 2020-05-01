@@ -17,71 +17,78 @@
             android:id="@+id/but1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
 
         <Button
             android:id="@+id/but2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
 
         <Button
             android:id="@+id/but3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
 
         <Button
             android:id="@+id/but4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginVertical="10dp"
         android:layout_weight="2">
 
         <Button
             android:id="@+id/but5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
 
         <Button
             android:id="@+id/but6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
 
         <Button
             android:id="@+id/but7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
 
         <Button
             android:id="@+id/but8"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
 
 
     </LinearLayout>
@@ -95,33 +102,36 @@
             android:id="@+id/but9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
 
         <Button
             android:id="@+id/but10"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
 
         <Button
             android:id="@+id/but11"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
 
         <Button
             android:id="@+id/but12"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="0sp"
-            android:onClick="BotonClick"/>
+            android:onClick="BotonClick"
+            android:textSize="0sp" />
 
     </LinearLayout>
 
