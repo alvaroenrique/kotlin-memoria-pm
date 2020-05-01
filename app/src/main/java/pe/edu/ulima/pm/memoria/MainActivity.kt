@@ -13,6 +13,8 @@ import androidx.core.graphics.drawable.DrawableCompat
 
 class MainActivity : AppCompatActivity() {
 
+    var currentButton: Button? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -73,11 +75,29 @@ class MainActivity : AppCompatActivity() {
 
     fun BotonClick(view: View) {
         val but: Button = view as Button
-        if (but.textSize == 0F){
+        if (this.currentButton == null) {
+            Log.d("ALVAROOO", "1")
             but.setTextSize(40F)
+            but.isClickable = false
+            this.currentButton = but
         }
-        else{
-            but.setTextSize(0F)
+        else if (but.text  == this.currentButton!!.text ) {
+            Log.d("ALVAROOO", "2")
+            but.setTextSize(40F)
+            but.isClickable = false
+            this.currentButton!!.isClickable = false
+            this.currentButton = null
+
+        }
+        else if (but.text  != this.currentButton!!.text )  {
+            Log.d("ALVAROOO", "3")
+            Log.d("ALVAROOO", but.text as String)
+            Log.d("ALVAROOO", this.currentButton!!.text as String)
+            but.textSize = 0F
+            this.currentButton!!.textSize = 0F
+            but.isClickable = true
+            this.currentButton!!.isClickable = true
+            this.currentButton = null
         }
 
     }
