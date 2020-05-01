@@ -1,12 +1,15 @@
 package pe.edu.ulima.pm.memoria
 
 import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.RippleDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import androidx.core.graphics.drawable.DrawableCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             "\uD83C\uDFD8"
         ).shuffled().take(6)
 
-        val colors: List<String> = listOf("#EBF5DF", "#EDB458", "#80CED7", "#CCDBDC", "#C5D1EB", "#FEFCAD", "#A7BED3", "#9F86C0")
+        val colors: List<String> = listOf( "#EDB458", "#80CED7", "#6EEB83", "#D7263D")
 
         val randomEmojis: List<String> = (emojis + emojis).shuffled()
 
@@ -60,7 +63,10 @@ class MainActivity : AppCompatActivity() {
 
         buttons.forEachIndexed { index, but ->
             but.text = randomEmojis[index]
-            but.setBackgroundColor(Color.parseColor(randomColor))
+            val background = but.background as RippleDrawable
+            val backgroundGradient = background.findDrawableByLayerId(R.id.item_shape) as GradientDrawable
+            backgroundGradient.setColor(Color.parseColor(randomColor))
+
         }
     }
 

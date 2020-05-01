@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="10dp" android:background="#545454"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -17,8 +17,9 @@
             android:id="@+id/but1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
 
@@ -26,8 +27,9 @@
             android:id="@+id/but2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
 
@@ -35,8 +37,9 @@
             android:id="@+id/but3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
 
@@ -44,7 +47,8 @@
             android:id="@+id/but4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="1" android:layout_marginHorizontal="5dp"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
     </LinearLayout>
@@ -59,8 +63,9 @@
             android:id="@+id/but5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
 
@@ -68,8 +73,9 @@
             android:id="@+id/but6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
 
@@ -77,8 +83,9 @@
             android:id="@+id/but7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
 
@@ -86,7 +93,8 @@
             android:id="@+id/but8"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="1" android:layout_marginHorizontal="5dp"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
 
@@ -102,8 +110,9 @@
             android:id="@+id/but9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
 
@@ -111,8 +120,9 @@
             android:id="@+id/but10"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
 
@@ -120,8 +130,9 @@
             android:id="@+id/but11"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
 
@@ -129,7 +140,8 @@
             android:id="@+id/but12"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="1" android:layout_marginHorizontal="5dp"
+            android:background="@drawable/custom_button"
             android:onClick="BotonClick"
             android:textSize="0sp" />
 
@@ -139,6 +151,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:textColor="#FFFFFF"
         android:text="Turno de jugador 1"
         android:textAlignment="center" />
 
