@@ -9,11 +9,14 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.core.graphics.drawable.DrawableCompat
 
 class MainActivity : AppCompatActivity() {
 
     var currentButton: Button? = null
+    var intentos: Int = 1
+    var jugadas_acertadas: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +25,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun initGame() {
+        val msg = findViewById<TextView>(R.id.msg)
+        msg.text = "Turno del jugador"
+        this.intentos = 1
+        this.jugadas_acertadas = 0
+        this.currentButton = null
         val emojis: List<String> = listOf(
             "\uD83D\uDE00",
             "\uD83D\uDE03",
@@ -42,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             "\uD83C\uDFD8"
         ).shuffled().take(6)
 
-        val colors: List<String> = listOf( "#EDB458", "#80CED7", "#6EEB83", "#D7263D")
+        val colors: List<String> = listOf("#EDB458", "#80CED7", "#6EEB83", "#D7263D")
 
         val randomEmojis: List<String> = (emojis + emojis).shuffled()
 
@@ -64,9 +72,11 @@ class MainActivity : AppCompatActivity() {
         )
 
         buttons.forEachIndexed { index, but ->
+            but.setTextSize(0f)
             but.text = randomEmojis[index]
             val background = but.background as RippleDrawable
-            val backgroundGradient = background.findDrawableByLayerId(R.id.item_shape) as GradientDrawable
+            val backgroundGradient =
+                background.findDrawableByLayerId(R.id.item_shape) as GradientDrawable
             backgroundGradient.setColor(Color.parseColor(randomColor))
 
         }
@@ -74,32 +84,58 @@ class MainActivity : AppCompatActivity() {
 
 
     fun BotonClick(view: View) {
+        val msg = findViewById<TextView>(R.id.msg)
         val but: Button = view as Button
-        if (this.currentButton == null) {
-            Log.d("ALVAROOO", "1")
+        if (this.jugadas_acertadas == 6) {
+            initGame()
+        } else if (this.currentButton == null) {
+            msg.text = "Turno del jugador"
             but.setTextSize(40F)
             but.isClickable = false
             this.currentButton = but
-        }
-        else if (but.text  == this.currentButton!!.text ) {
-            Log.d("ALVAROOO", "2")
+        } else if (but.text == this.currentButton!!.text) {
             but.setTextSize(40F)
             but.isClickable = false
             this.currentButton!!.isClickable = false
             this.currentButton = null
-
-        }
-        else if (but.text  != this.currentButton!!.text )  {
-            Log.d("ALVAROOO", "3")
-            Log.d("ALVAROOO", but.text as String)
-            Log.d("ALVAROOO", this.currentButton!!.text as String)
+            this.jugadas_acertadas = this.jugadas_acertadas + 1
+            if (this.jugadas_acertadas == 6) {
+                msg.text = "Ganaste! te tomaron " + this.intentos + " intentos"
+                makeButtonsClickeables()
+            }
+        } else if (but.text != this.currentButton!!.text) {
             but.textSize = 0F
             this.currentButton!!.textSize = 0F
             but.isClickable = true
             this.currentButton!!.isClickable = true
             this.currentButton = null
+
+            this.intentos = this.intentos + 1
+            msg.text = "Error"
+
+
         }
 
+    }
+
+    fun makeButtonsClickeables() {
+        val buttons: Array<Button> = arrayOf(
+            findViewById(R.id.but1),
+            findViewById(R.id.but2),
+            findViewById(R.id.but3),
+            findViewById(R.id.but4),
+            findViewById(R.id.but5),
+            findViewById(R.id.but6),
+            findViewById(R.id.but7),
+            findViewById(R.id.but8),
+            findViewById(R.id.but9),
+            findViewById(R.id.but10),
+            findViewById(R.id.but11),
+            findViewById(R.id.but12)
+        )
+        buttons.forEachIndexed { index, but ->
+            but.isClickable = true
+        }
     }
 
 
