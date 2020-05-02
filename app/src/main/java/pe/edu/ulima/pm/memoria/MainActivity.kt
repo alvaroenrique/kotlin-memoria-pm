@@ -72,13 +72,12 @@ class MainActivity : AppCompatActivity() {
         )
 
         buttons.forEachIndexed { index, but ->
-            but.setTextSize(0f)
+            but.textSize = 0f
             but.text = randomEmojis[index]
             val background = but.background as RippleDrawable
             val backgroundGradient =
                 background.findDrawableByLayerId(R.id.item_shape) as GradientDrawable
             backgroundGradient.setColor(Color.parseColor(randomColor))
-
         }
     }
 
@@ -90,11 +89,11 @@ class MainActivity : AppCompatActivity() {
             initGame()
         } else if (this.currentButton == null) {
             msg.text = "Turno del jugador"
-            but.setTextSize(40F)
+            but.textSize = 40F
             but.isClickable = false
             this.currentButton = but
         } else if (but.text == this.currentButton!!.text) {
-            but.setTextSize(40F)
+            but.textSize = 40F
             but.isClickable = false
             this.currentButton!!.isClickable = false
             this.currentButton = null
@@ -112,10 +111,7 @@ class MainActivity : AppCompatActivity() {
 
             this.intentos = this.intentos + 1
             msg.text = "Error"
-
-
         }
-
     }
 
     fun makeButtonsClickeables() {
@@ -133,10 +129,9 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.but11),
             findViewById(R.id.but12)
         )
-        buttons.forEachIndexed { index, but ->
+        buttons.forEachIndexed { _, but ->
             but.isClickable = true
         }
     }
-
 
 }
