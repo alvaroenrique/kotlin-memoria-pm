@@ -50,7 +50,22 @@ class MainActivity : AppCompatActivity() {
             "\uD83C\uDFD8"
         ).shuffled().take(6)
 
-        val colors: List<String> = listOf("#EDB458", "#80CED7", "#6EEB83", "#D7263D")
+        val colors: List<String> = listOf(
+            "#EDB458",
+            "#80CED7",
+            "#6EEB83",
+            "#D7263D",
+            "#34F6F2",
+            "#F7934C",
+            "#52489C",
+            "#00A1E4",
+            "#577590",
+            "#F3CA40",
+            "#9B5DE5",
+            "#F15BB5",
+            "#4F000B",
+            "#150578"
+        )
 
         val randomEmojis: List<String> = (emojis + emojis).shuffled()
 
